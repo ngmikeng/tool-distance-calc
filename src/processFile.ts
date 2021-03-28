@@ -31,7 +31,7 @@ export default class ProcessFile {
 
   async writeFileAsync(header, data) {
     const csvWriter = createObjectCsvWriter({
-      path: `${this.filePath}.out`,
+      path: `${this.filePath}.out.csv`,
       header
     })
     try {

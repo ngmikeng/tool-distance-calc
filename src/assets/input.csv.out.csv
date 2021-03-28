@@ -1,0 +1,11 @@
+no,districtCode,districtName,wardCode,wardName,destAddr,ggOriginAddr,ggDestAddr,ggDistance,ggDuration
+1,760,Quận 1,26734,Phường Tân Định,"Phường Tân Định, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Tan Dinh, District 1, Ho Chi Minh City, Vietnam",7.8 km,24 mins
+2,760,Quận 1,26737,Phường Đa Kao,"Phường Đa Kao, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Da Kao, District 1, Ho Chi Minh City, Vietnam",6.5 km,18 mins
+3,760,Quận 1,26740,Phường Bến Nghé,"Phường Bến Nghé, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Bến Nghé, District 1, Ho Chi Minh City, Vietnam",5.4 km,16 mins
+4,760,Quận 1,26743,Phường Bến Thành,"Phường Bến Thành, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Ben Thanh, District 1, Ho Chi Minh City, Vietnam",4.9 km,15 mins
+5,760,Quận 1,26746,Phường Nguyễn Thái Bình,"Phường Nguyễn Thái Bình, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Nguyen Thai Binh, District 1, Ho Chi Minh City, Vietnam",3.8 km,11 mins
+6,760,Quận 1,26749,Phường Phạm Ngũ Lão,"Phường Phạm Ngũ Lão, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Pham Ngu Lao, District 1, Ho Chi Minh City, Vietnam",4.0 km,12 mins
+7,760,Quận 1,26752,Phường Cầu Ông Lãnh,"Phường Cầu Ông Lãnh, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Cầu Ông Lãnh, District 1, Ho Chi Minh City, Vietnam",3.4 km,9 mins
+8,760,Quận 1,26755,Phường Cô Giang,"Phường Cô Giang, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Co Giang, District 1, Ho Chi Minh City, Vietnam",4.6 km,13 mins
+9,760,Quận 1,26758,Phường Nguyễn Cư Trinh,"Phường Nguyễn Cư Trinh, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Nguyen Cu Trinh, District 1, Ho Chi Minh City, Vietnam",4.9 km,15 mins
+10,760,Quận 1,26761,Phường Cầu Kho,"Phường Cầu Kho, Quận 1, Ho Chi Minh City","469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh, Vietnam","Cau Kho, District 1, Ho Chi Minh City, Vietnam",5.0 km,13 mins
