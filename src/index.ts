@@ -5,7 +5,7 @@ import TimedQueue from './timedQueue';
 import ProcessFile from './processFile';
 
 const FILE_PATH = process.argv[2];
-const MAX_ELEMENTS = 50;
+const MAX_ELEMENTS = 10;
 
 if (!FILE_PATH) {
   throw new Error('Input file .csv not found');
@@ -50,10 +50,17 @@ const main = async () => {
     console.log('Distance Result', JSON.stringify(distanceResult));
     // write new file csv
     const chunkNewData = chunkData.map((item, index) => {
+      let ggDistance = 'UNKNOWN', ggDuration = 'UNKNOWN';
+      if (distElements[index] && distElements[index].status === 'OK') {
+        ggDistance = distElements[index].distance.text;
+        ggDuration = distElements[index].duration.text
+      }
       return {
         ...item,
-        ggOriginAddr: originAddr, ggDestAddr: destAddrs[index],
-        ggDistance: distElements[index].distance.text, ggDuration: distElements[index].duration.text
+        ggOriginAddr: originAddr,
+        ggDestAddr: destAddrs[index],
+        ggDistance,
+        ggDuration
       };
     });
     outData = outData.concat(chunkNewData);
