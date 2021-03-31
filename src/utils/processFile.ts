@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as csv from 'fast-csv';
 import { createObjectCsvWriter } from 'csv-writer';
-import { IDataRow, IProccessFile } from './model';
+import { IDataRow, IProccessFile } from '../model';
 
 export default class ProcessFile {
   private filePath;

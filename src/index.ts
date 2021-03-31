@@ -1,8 +1,6 @@
-import * as path from 'path';
 import Config from './.config';
 import { DistanceCalculator } from './distance';
-import TimedQueue from './timedQueue';
-import ProcessFile from './processFile';
+import ProcessFile from './utils/processFile';
 
 const FILE_PATH = process.argv[2];
 const MAX_ELEMENTS = 10;
@@ -10,9 +8,6 @@ const MAX_ELEMENTS = 10;
 if (!FILE_PATH) {
   throw new Error('Input file .csv not found');
 }
-
-const timedQueue = TimedQueue.getInstance();
-const filePath = path.resolve(FILE_PATH);
 
 const main = async () => {
   console.log('API-KEY', Config.apiKey);
@@ -24,7 +19,7 @@ const main = async () => {
   const newData = data.map(item => {
     return {...item, destAddr: `${item.wardName}, ${item.districtName}, Ho Chi Minh City`}
   });
-  console.log(`Processing calcuate distance...`);
+  console.log(`Processing calculate distance...`);
   // calc by chunk because limit quota 100 elements per request
   let startIndex = 0;
   let curChunk = newData.slice(startIndex, MAX_ELEMENTS);
@@ -77,20 +72,3 @@ const main = async () => {
 };
 
 main().catch(error => console.log(error.stack));
-
-// fs.createReadStream(filePath)
-//   .pipe(csv.parse({ headers: true }))
-//   .on('error', error => console.error(error))
-//   .on('data', row => {
-//     console.log(row);
-//     timedQueue.addTask({
-//       callback: () => {
-//         console.log(`processing ${row.id}-${row.name} in 1 seconds`);
-//       },
-//       time: 1000
-//     })
-//   })
-//   .on('end', (rowCount: number) => {
-//     console.log(`Parsed ${rowCount} rows`)
-//     timedQueue.start();
-//   });
