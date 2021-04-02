@@ -1,5 +1,5 @@
 import { Client } from "@googlemaps/google-maps-services-js";
-import { IDistanceResult } from "./model";
+import { IDistanceResult } from "../model";
 
 export class DistanceCalculator {
   private client;
@@ -20,7 +20,6 @@ export class DistanceCalculator {
       });
       return result.data;
     } catch (error) {
-      console.log('msg', error.message)
       throw error;
     }
   }

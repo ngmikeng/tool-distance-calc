@@ -1,5 +1,5 @@
 import Config from './.config';
-import { DistanceCalculator } from './distance';
+import { DistanceCalculator } from './utils/distance';
 import ProcessFile from './utils/processFile';
 
 const FILE_PATH = process.argv[2];
@@ -11,7 +11,7 @@ if (!FILE_PATH) {
 
 const main = async () => {
   console.log('API-KEY', Config.apiKey);
-  const distanceCalc = new DistanceCalculator({ apiKey: Config.apiKey })
+  const distanceCalc = new DistanceCalculator({ apiKey: Config.apiKey });
   const processFile = new ProcessFile({ filePath: FILE_PATH });
   const data = await processFile.readFilePromise();
   console.log('Data item: ', data[0]);
