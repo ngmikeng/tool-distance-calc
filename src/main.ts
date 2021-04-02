@@ -14,7 +14,6 @@ async function calcDistanceChunks({ chunkData, distanceCalcInstance, fromAddr })
     const destAddrs = distanceResult.destination_addresses;
     const originAddr = distanceResult.origin_addresses[0];
     const distElements = distanceResult.rows[0].elements;
-    console.log('Distance Result', JSON.stringify(distanceResult));
     // write new file csv
     const chunkNewData = chunkData.map((item, index) => {
       let ggDistance = 'UNKNOWN', ggDuration = 'UNKNOWN';
@@ -50,7 +49,7 @@ const main = async () => {
   });
 
   const simpleBar = cli.progress({
-    format: 'CLI Progress | {bar} | {percentage}% | {value}/{total} Chunks',
+    format: 'API Progress | {bar} | {percentage}% | {value}/{total} Chunks',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
@@ -65,7 +64,7 @@ const main = async () => {
   let outData = [];
   virtualDataStream.on('data', async (chunk) => {
     try {
-      const chunkDataCalculated = await calcDistanceChunks({ distanceCalcInstance: distanceCalc, chunkData, fromAddr: inOriginAddress });
+      const chunkDataCalculated = await calcDistanceChunks({ distanceCalcInstance: distanceCalc, chunkData: chunk, fromAddr: inOriginAddress });
       outData = outData.concat(chunkDataCalculated);
       chunkCount++;
       simpleBar.update(chunkCount);
@@ -75,7 +74,7 @@ const main = async () => {
     }
   });
   virtualDataStream.on('end', async () => {
-    console.log('\nEND');
+    console.log('\nDONE');
     simpleBar.stop();
     // handle write file
     if (outData.length) {

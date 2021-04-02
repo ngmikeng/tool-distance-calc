@@ -2,16 +2,16 @@
   "name": "tool-distance-calc",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "tsc && node dist/index.js",
-    "ts-node": "ts-node src/main.ts"
+    "start": "tsc && node dist/main.js",
+    "ts-start": "ts-node src/main.ts"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Minh Nguyen",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.14.35",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
